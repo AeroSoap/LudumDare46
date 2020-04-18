@@ -229,7 +229,7 @@ MonoBehaviour:
   MoveLeft: z
   MoveRight: x
   MovementForce: 5000
-  CorrectionStrength: 25
+  CorrectionStrength: 150
   LeftProp: {fileID: 372068515284840159}
   RightProp: {fileID: 4655492099263944777}
 --- !u!1 &4655492099263944777

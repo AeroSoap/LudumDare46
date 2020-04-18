@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DroneControl : Control
-{
+public class DroneControl : Control {
 	public string MoveLeft;
 	public string MoveRight;
 	public float MovementForce;

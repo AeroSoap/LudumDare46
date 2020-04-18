@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Control : MonoBehaviour
-{
-	protected bool isEnabled = true;
+public class Control : MonoBehaviour {
+
+	protected bool isEnabled = false;
 
 	public void enable() {
 		isEnabled = true;
@@ -12,6 +12,10 @@ public class Control : MonoBehaviour
 
 	public void disable() {
 		isEnabled = false;
+	}
+
+	private void OnMouseDown() {
+		Hacker.hack(this);
 	}
 
 	// Start is called before the first frame update
