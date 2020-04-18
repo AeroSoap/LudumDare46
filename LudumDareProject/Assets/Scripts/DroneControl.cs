@@ -30,5 +30,15 @@ public class DroneControl : Control
 		if(Input.GetKey(MoveRight)) {
 			rb.AddForceAtPosition(dir * MovementForce, LeftProp.transform.position);
 		}
+
+		if(transform.eulerAngles.z > 30 && transform.eulerAngles.z < 180)
+		{
+			rb.AddForceAtPosition(dir * MovementForce, LeftProp.transform.position);
+		}
+
+		if (transform.eulerAngles.z < 330 && transform.eulerAngles.z > 180)
+		{
+			rb.AddForceAtPosition(dir * MovementForce, RightProp.transform.position);
+		}
 	}
 }
