@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DroneControl : Control {
+// Josh
+
+public class DroneControl : MonoBehaviour {
+
 	public string MoveLeft;
 	public string MoveRight;
 	public float MovementForce;
@@ -11,7 +14,12 @@ public class DroneControl : Control {
 	public GameObject LeftProp;
 	public GameObject RightProp;
 
+	public GameObject HealthBar;
+	HealthBar health;
+
 	Rigidbody2D rb;
+
+	bool onGround = false;
 
 	// Start is called before the first frame update
 	void Start() {
@@ -19,20 +27,30 @@ public class DroneControl : Control {
 		MovementForce *= Time.fixedDeltaTime;
 	}
 
+	private void OnCollisionEnter2D(Collision2D col) {
+		onGround = true;
+		Debug.Log(col.relativeVelocity.magnitude);
+	}
+
+	private void OnCollisionExit2D(Collision2D col) {
+		onGround = false;
+	}
+
 	void FixedUpdate() {
 		Vector2 dir = new Vector2();
 		dir.x = Mathf.Cos(Mathf.Deg2Rad * (transform.eulerAngles.z + 90));
 		dir.y = Mathf.Sin(Mathf.Deg2Rad * (transform.eulerAngles.z + 90));
-		if(transform.eulerAngles.z > 30 && transform.eulerAngles.z < 180) {
-			float dif = (transform.eulerAngles.z - 30) * Time.fixedDeltaTime;
-			rb.AddForceAtPosition(dir * Mathf.Min(MovementForce, dif * CorrectionStrength), LeftProp.transform.position);
-		}
+		if(!onGround) {
+			if(transform.eulerAngles.z > 30 && transform.eulerAngles.z < 180) {
+				float dif = (transform.eulerAngles.z - 30) * Time.fixedDeltaTime;
+				rb.AddForceAtPosition(dir * Mathf.Min(MovementForce, dif * CorrectionStrength), LeftProp.transform.position);
+			}
 
-		if(transform.eulerAngles.z < 330 && transform.eulerAngles.z > 180) {
-			float dif = (330 - transform.eulerAngles.z) * Time.fixedDeltaTime;
-			rb.AddForceAtPosition(dir * Mathf.Min(MovementForce, dif * CorrectionStrength), RightProp.transform.position);
+			if(transform.eulerAngles.z < 330 && transform.eulerAngles.z > 180) {
+				float dif = (330 - transform.eulerAngles.z) * Time.fixedDeltaTime;
+				rb.AddForceAtPosition(dir * Mathf.Min(MovementForce, dif * CorrectionStrength), RightProp.transform.position);
+			}
 		}
-		if(!isEnabled) return;
 		if(Input.GetKey(MoveLeft)) {
 			rb.AddForceAtPosition(dir * MovementForce, RightProp.transform.position);
 		}
