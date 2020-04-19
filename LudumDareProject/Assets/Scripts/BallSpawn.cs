@@ -19,7 +19,7 @@ public class BallSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnPos = new Vector3(xPos, yPos, 0);
+        spawnPos = new Vector3(transform.position.x - 1, transform.position.y - 2, 0);
         StartCoroutine(Spawn());
     }
 
@@ -31,7 +31,7 @@ public class BallSpawn : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
         Instantiate(SpawnedObject, spawnPos, Quaternion.identity);
         StartCoroutine(Spawn());
     }

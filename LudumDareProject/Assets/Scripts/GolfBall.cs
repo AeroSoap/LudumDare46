@@ -12,17 +12,19 @@ using UnityEngine;
 public class GolfBall : MonoBehaviour
 {
     Vector2 direction = new Vector2(-1, 1).normalized;
-    public float magnitude;
+    int magnitude;
     Rigidbody2D myRb;
     float time = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        magnitude = Random.Range(10, 25);
         //set myRb tp the ball's rigidbody
         myRb = GetComponent<Rigidbody2D>();
         //apply force at an upward angle to the ball
         myRb.AddRelativeForce(direction * magnitude, ForceMode2D.Impulse);
+        //set magnitude to a random number between 15 and 25
     }
 
     // Update is called once per frame
@@ -35,7 +37,7 @@ public class GolfBall : MonoBehaviour
     IEnumerator Despawn()
     {
         //after 5 seconds, destroy the object holding this script
-        while (time < 5)
+        while (time < 3)
         {
             yield return new WaitForFixedUpdate();
         }
