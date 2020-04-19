@@ -14,12 +14,12 @@ public class StormCloud : MonoBehaviour
 
 	// Start is called before the first frame update
 	void Start() {
-		StartCoroutine(LightningSpawn());
+		StartCoroutine(InitializeCloud());
 	}
 
-	// Update is called once per frame
-	void Update() {
-		
+	IEnumerator InitializeCloud() {
+		yield return new WaitForSeconds(Random.value * Interval);
+		StartCoroutine(LightningSpawn());
 	}
 
 	IEnumerator LightningDestroy() {

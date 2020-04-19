@@ -41,8 +41,8 @@ public class Health : MonoBehaviour {
 	public void hurt(float amt) {
 		amt /= Armor;
 		health -= amt;
-		if(health < 0) {
-			SceneManager.LoadScene("Warehouse");
+		if(health <= 0) {
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
 	}
 }
