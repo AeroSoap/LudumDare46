@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
 
@@ -25,6 +26,11 @@ public class Health : MonoBehaviour {
 
 	private void OnCollisionEnter2D(Collision2D col) {
 		float hitForce = col.relativeVelocity.magnitude;
+		if(col.rigidbody == null) {
+			hitForce *= col.otherRigidbody.mass;
+		} else {
+			hitForce *= Mathf.Min(col.rigidbody.mass, col.otherRigidbody.mass);
+		}
 		if(hitForce > 5) {
 			hurt(hitForce);
 		}
@@ -34,7 +40,7 @@ public class Health : MonoBehaviour {
 		amt /= Armor;
 		health -= amt;
 		if(health < 0) {
-			health = 0;
+			SceneManager.LoadScene("Warehouse");
 		}
 	}
 }
