@@ -11,6 +11,7 @@ using UnityEngine;
 
 public class RotationClub : MonoBehaviour
 {
+    Vector3 backwards = new Vector3(0, 0, -4);
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,6 @@ public class RotationClub : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.Rotate(Vector3.back);
+        transform.Rotate(backwards);
     }
 }

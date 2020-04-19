@@ -19,7 +19,7 @@ public class GolfBall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        magnitude = Random.Range(10, 25);
+        magnitude = Random.Range(10, 30);
         //set myRb tp the ball's rigidbody
         myRb = GetComponent<Rigidbody2D>();
         //apply force at an upward angle to the ball
