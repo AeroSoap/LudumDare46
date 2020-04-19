@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8596473448751397554}
   - component: {fileID: 5736947009111717135}
   - component: {fileID: 3435290522366270202}
-  - component: {fileID: -3567435084664375709}
+  - component: {fileID: -6509220661643023281}
   m_Layer: 0
   m_Name: Landing Pad
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6887449881503284986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1ef7c9d00e0129c418d64cd07dd73baa, type: 3}
-  m_Color: {r: 0.5205751, g: 0.24256852, b: 0.6509434, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 849e9b23d8856764e85435d57d5ff8a0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,8 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextScene: 
---- !u!61 &-3567435084664375709
-BoxCollider2D:
+  LandTime: 1
+--- !u!60 &-6509220661643023281
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -106,19 +107,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 4, y: 0.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.09, y: 0.25}
+      - {x: -1.8299999, y: 0.25}
+      - {x: -2, y: -0.02}
+      - {x: -2, y: -0.25}
+      - {x: 2, y: -0.25}
+      - {x: 2, y: -0.16}
+      - {x: 1.8, y: 0.24}

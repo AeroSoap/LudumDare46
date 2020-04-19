@@ -9,7 +9,7 @@ public class PlaneSpawner : MonoBehaviour {
 	public GameObject Player;
 	public GameObject Plane;
 	public float MaxY;
-	public float LaunchForce;
+	public float LaunchForce = 7500000;
 
 	// Start is called before the first frame update
 	void Start() {
