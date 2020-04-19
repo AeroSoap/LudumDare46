@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Josh
+
 public class Health : MonoBehaviour {
 
 	public float Armor = 1;

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Josh
+
 public class HealthBackground : MonoBehaviour {
 
 	public Vector3 Offset;
