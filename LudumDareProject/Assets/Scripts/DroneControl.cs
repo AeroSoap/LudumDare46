@@ -9,7 +9,8 @@ public class DroneControl : MonoBehaviour {
 	public string MoveLeft;
 	public string MoveRight;
 	public float MovementForce;
-	public float CorrectionStrength;
+	public float CorrectionStrength = 100;
+	public float PropellerDistance = 0.25f;
 
 	public GameObject LeftProp;
 	public GameObject RightProp;
@@ -22,6 +23,9 @@ public class DroneControl : MonoBehaviour {
 	void Start() {
 		rb = GetComponent<Rigidbody2D>();
 		MovementForce *= Time.fixedDeltaTime;
+		Vector3 center = rb.centerOfMass;
+		LeftProp.transform.position = transform.position + center + new Vector3(-PropellerDistance, 0);
+		RightProp.transform.position = transform.position + center + new Vector3(PropellerDistance, 0);
 	}
 
 	private void OnCollisionEnter2D(Collision2D col) {

@@ -7,9 +7,11 @@ using UnityEngine;
 public class Bird : MonoBehaviour {
 
     public float Acceleration;
+    public Sprite OtherSprite;
 
     Rigidbody2D rb;
     float despawnX;
+    SpriteRenderer sr;
 
     public void SetDespawn(float x) {
         despawnX = x;
@@ -18,6 +20,7 @@ public class Bird : MonoBehaviour {
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         Acceleration *= Time.fixedDeltaTime;
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate() {
@@ -26,5 +29,11 @@ public class Bird : MonoBehaviour {
         if(transform.position.x < despawnX) {
             Destroy(gameObject);
         }
+    }
+
+    private void Update() {
+        Sprite temp = sr.sprite;
+        sr.sprite = OtherSprite;
+        OtherSprite = temp;
     }
 }
