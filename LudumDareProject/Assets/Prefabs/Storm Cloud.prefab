@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 510c4dba397f83541ac99d23c30f48a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Interval: 5
+  Interval: 3
   LightningTime: 0.25
   Lightning: {fileID: 3760504436577700804, guid: 8b7d9b6d363c39040bdf3fc396cff724,
     type: 3}
