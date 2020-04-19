@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LandingPad : MonoBehaviour
-{
+// Josh
+
+public class LandingPad : MonoBehaviour {
 	public string NextScene;
 
 	private void OnTriggerEnter2D(Collider2D col) {

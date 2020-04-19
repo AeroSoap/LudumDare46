@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneChangeButton : MonoBehaviour
-{
+// Josh
+
+public class SceneChangeButton : MonoBehaviour {
 	public string TargetScene;
 	public Sprite HoverSprite;
 
