@@ -30,6 +30,10 @@ public class PlaneSpawner : MonoBehaviour {
 				y = Player.transform.position.y;
 				GameObject plane = Instantiate(Plane, new Vector3(x, y), Quaternion.identity);
 				plane.GetComponent<Rigidbody2D>().AddForce(new Vector2(v, 0));
+				if(v > 0) {
+					plane.transform.localScale = new Vector3(plane.transform.localScale.x * -1
+						,plane.transform.localScale.y, plane.transform.localScale.z);
+				}
 			}
 		}
 	}

@@ -158,7 +158,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -498,7 +498,7 @@ MonoBehaviour:
   Player: {fileID: 437944138}
   Plane: {fileID: 7821595547692161863, guid: 64604bf7ef26b7248b8d49d6176a6800, type: 3}
   MaxY: 10
-  LaunchForce: 10000
+  LaunchForce: 7500000
 --- !u!1001 &1513613968
 PrefabInstance:
   m_ObjectHideFlags: 0

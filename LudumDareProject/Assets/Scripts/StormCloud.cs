@@ -29,7 +29,7 @@ public class StormCloud : MonoBehaviour
 
 	IEnumerator LightningSpawn() {
 		yield return new WaitForSeconds(Interval);
-		lightning = Instantiate(Lightning, transform.position + new Vector3(0, -50), Quaternion.identity);
+		lightning = Instantiate(Lightning, transform.position + new Vector3(0, -12.5f), Quaternion.identity);
 		StartCoroutine(LightningSpawn());
 		StartCoroutine(LightningDestroy());
 	}

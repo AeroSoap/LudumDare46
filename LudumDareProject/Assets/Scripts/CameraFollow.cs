@@ -17,6 +17,7 @@ public class CameraFollow : MonoBehaviour {
 		trans = Target.GetComponent<Transform>();
 		rb = Target.GetComponent<Rigidbody2D>();
 		Speed *= Time.fixedDeltaTime;
+		transform.position = new Vector3(trans.position.x, trans.position.y, transform.position.z);
 	}
 
 	void FixedUpdate() {

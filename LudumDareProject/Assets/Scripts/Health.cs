@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour {
 
 	public float Armor = 1;
+	public float DeathTime = 1.5f;
 	public GameObject HealthBar;
 	public GameObject HealthBackground;
 	HealthBar healthBar;
@@ -43,7 +44,12 @@ public class Health : MonoBehaviour {
 		health -= amt;
 		if(health <= 0) {
 			health = 0;
-			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+			StartCoroutine(kill());
 		}
+	}
+
+	IEnumerator kill() {
+		yield return new WaitForSeconds(DeathTime);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 }
