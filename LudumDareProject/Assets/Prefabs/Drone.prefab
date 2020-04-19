@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 2033269989668323523}
   - component: {fileID: 2033269989668323522}
   - component: {fileID: -4038336074347934541}
+  - component: {fileID: -9037612715151985822}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Untagged
@@ -232,6 +233,24 @@ MonoBehaviour:
   CorrectionStrength: 100
   LeftProp: {fileID: 372068515284840159}
   RightProp: {fileID: 4655492099263944777}
+--- !u!114 &-9037612715151985822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033269989668323521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d499c3e06ea1d4a9c75d2b02a0102d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Armor: 100
+  HealthBar: {fileID: 4760268348689238255, guid: 0983727b66d07c740bab5dc2a74990e2,
+    type: 3}
+  HealthBackground: {fileID: 5691483161478296204, guid: f2965abc8816a064faf114632acda088,
+    type: 3}
+  health: 1
 --- !u!1 &4655492099263944777
 GameObject:
   m_ObjectHideFlags: 0

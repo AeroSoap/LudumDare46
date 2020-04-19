@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthBar : MonoBehaviour {
+public class HealthBackground : MonoBehaviour {
 
 	public Vector3 Offset;
 
@@ -13,8 +13,7 @@ public class HealthBar : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update() {
-		transform.localScale = new Vector3(Health.health, transform.localScale.y, transform.localScale.z);
-		transform.position = Vehicle.transform.position + Offset - new Vector3((1 - Health.health) / 2, 0, 0);
+		transform.position = Vehicle.transform.position + Offset;
 		transform.rotation = Quaternion.identity;
 	}
 }

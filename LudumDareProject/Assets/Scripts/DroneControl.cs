@@ -14,9 +14,6 @@ public class DroneControl : MonoBehaviour {
 	public GameObject LeftProp;
 	public GameObject RightProp;
 
-	public GameObject HealthBar;
-	HealthBar health;
-
 	Rigidbody2D rb;
 
 	bool onGround = false;
@@ -29,7 +26,6 @@ public class DroneControl : MonoBehaviour {
 
 	private void OnCollisionEnter2D(Collision2D col) {
 		onGround = true;
-		Debug.Log(col.relativeVelocity.magnitude);
 	}
 
 	private void OnCollisionExit2D(Collision2D col) {
