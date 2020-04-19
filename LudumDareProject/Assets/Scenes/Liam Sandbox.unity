@@ -224,12 +224,12 @@ PrefabInstance:
     - target: {fileID: 2033269989668323549, guid: 4a54431f3eef0b745a66f052b953b8ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.2
+      value: -4.2
       objectReference: {fileID: 0}
     - target: {fileID: 2033269989668323549, guid: 4a54431f3eef0b745a66f052b953b8ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.46
+      value: -2.25
       objectReference: {fileID: 0}
     - target: {fileID: 2033269989668323549, guid: 4a54431f3eef0b745a66f052b953b8ec,
         type: 3}
@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 2118671202}
   - component: {fileID: 2118671201}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: GolfBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
