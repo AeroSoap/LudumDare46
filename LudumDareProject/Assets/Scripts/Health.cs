@@ -42,6 +42,7 @@ public class Health : MonoBehaviour {
 		amt /= Armor;
 		health -= amt;
 		if(health <= 0) {
+			health = 0;
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
 	}
