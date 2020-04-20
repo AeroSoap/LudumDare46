@@ -11,15 +11,16 @@ using UnityEngine;
 
 public class BallSpawn : MonoBehaviour
 {
-    public float xPos;
-    public float yPos;
+    public float xOffest;
+    public float yOffest;
     Vector3 spawnPos;
     public GameObject SpawnedObject;
+    public float time;
 
     // Start is called before the first frame update
     void Start()
     {
-        spawnPos = new Vector3(transform.position.x - 1, transform.position.y - 2.4f, 0);
+        spawnPos = new Vector3(transform.position.x + xOffest, transform.position.y + yOffest, 0);
         StartCoroutine(Spawn());
     }
 
@@ -31,7 +32,7 @@ public class BallSpawn : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(time);
         Instantiate(SpawnedObject, spawnPos, Quaternion.identity);
         StartCoroutine(Spawn());
     }
