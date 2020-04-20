@@ -158,7 +158,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.34901962, g: 0.34901962, b: 0.34901962, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -302,14 +302,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1465023622}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b650081a5e61b5648b0addd5c8122587, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b78343602cbe3742992284949ad68fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AirParticles: 100
-  Lifespan: 5
-  AirParticle: {fileID: 2564334870046613192, guid: 4d81856d3f0609c4084baf8a22021f3a,
-    type: 3}
-  Player: {fileID: 437944138}
+  Camera: {fileID: 122266876}
+  Grid: {fileID: 4941306875501540712, guid: 562305633091ded41b688f9200d6298c, type: 3}
 --- !u!1001 &1513613968
 PrefabInstance:
   m_ObjectHideFlags: 0

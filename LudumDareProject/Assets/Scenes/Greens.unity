@@ -1506,7 +1506,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2969,6 +2969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1961709520}
   - component: {fileID: 1961709519}
+  - component: {fileID: 1961709521}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -3006,6 +3007,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1961709521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961709518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b78343602cbe3742992284949ad68fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 1123998119}
+  Grid: {fileID: 4941306875501540712, guid: 562305633091ded41b688f9200d6298c, type: 3}
 --- !u!1 &1993883685
 GameObject:
   m_ObjectHideFlags: 0
