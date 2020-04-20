@@ -11,6 +11,8 @@ using UnityEngine;
 
 public class GolfBall : MonoBehaviour
 {
+    public float DespawnTime = 3;
+
     Vector2 direction = new Vector2(-1, 1).normalized;
     public int magnitude;
     Rigidbody2D myRb;
@@ -29,22 +31,14 @@ public class GolfBall : MonoBehaviour
         //apply force at an upward angle to the ball
         myRb.AddRelativeForce(direction * magnitude, ForceMode2D.Impulse);
         //set magnitude to a random number between 15 and 25
-    }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        time += Time.fixedDeltaTime;
         StartCoroutine(Despawn());
     }
 
+
     IEnumerator Despawn()
     {
-        //after 5 seconds, destroy the object holding this script
-        while (time < 3)
-        {
-            yield return new WaitForFixedUpdate();
-        }
+        yield return new WaitForSeconds(DespawnTime);
         Destroy(gameObject);
     }
 }

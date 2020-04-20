@@ -203,6 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveLeft: z
   MoveRight: x
+  SelfDestruct: v
   MovementForce: 5000
   CorrectionStrength: 100
   PropellerDistance: 0.25

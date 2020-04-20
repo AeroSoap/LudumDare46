@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 391515675}
-  Speed: 5
+  Speed: 2
   VelocityWeight: 0.4
 --- !u!20 &519420031
 Camera:
@@ -302,7 +302,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.34901962, g: 0.34901962, b: 0.34901962, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -533,6 +533,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648831834943045598, guid: 4a54431f3eef0b745a66f052b953b8ec,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127909512921940751, guid: 4a54431f3eef0b745a66f052b953b8ec,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a54431f3eef0b745a66f052b953b8ec, type: 3}
@@ -1185,7 +1195,7 @@ PrefabInstance:
     - target: {fileID: 3435290522366270202, guid: 16a551aff71a9804f800a97985af0432,
         type: 3}
       propertyPath: NextScene
-      value: Warehouse
+      value: Greens
       objectReference: {fileID: 0}
     - target: {fileID: 6887449881503284986, guid: 16a551aff71a9804f800a97985af0432,
         type: 3}
@@ -1200,7 +1210,7 @@ PrefabInstance:
     - target: {fileID: 8596473448751397554, guid: 16a551aff71a9804f800a97985af0432,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 56.25
+      value: 56.49
       objectReference: {fileID: 0}
     - target: {fileID: 8596473448751397554, guid: 16a551aff71a9804f800a97985af0432,
         type: 3}
@@ -1246,11 +1256,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8596473448751397554, guid: 16a551aff71a9804f800a97985af0432,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a551aff71a9804f800a97985af0432, type: 3}
