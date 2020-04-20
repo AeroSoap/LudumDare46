@@ -8,6 +8,7 @@ public class DroneControl : MonoBehaviour {
 
 	public string MoveLeft;
 	public string MoveRight;
+	public string SelfDestruct;
 	public float MovementForce;
 	public float CorrectionStrength = 100;
 	public float PropellerDistance = 0.25f;
@@ -57,6 +58,9 @@ public class DroneControl : MonoBehaviour {
 			}
 			if(Input.GetKey(MoveRight)) {
 				rb.AddForceAtPosition(dir * MovementForce, LeftProp.transform.position);
+			}
+			if(Input.GetKey(SelfDestruct)) {
+				GetComponent<Health>().hurt(10000);
 			}
 		}
 	}

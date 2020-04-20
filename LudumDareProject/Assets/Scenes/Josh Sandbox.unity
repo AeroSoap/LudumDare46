@@ -158,7 +158,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.08891064, g: 0.10702274, b: 0.16981131, a: 0}
+  m_BackGroundColor: {r: 0.34901962, g: 0.34901962, b: 0.34901962, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 1465023623}
   - component: {fileID: 1465023624}
   - component: {fileID: 1465023625}
+  - component: {fileID: 1465023626}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -292,6 +293,23 @@ MonoBehaviour:
   Plane: {fileID: 7821595547692161863, guid: 64604bf7ef26b7248b8d49d6176a6800, type: 3}
   MaxY: 10
   LaunchForce: 7500000
+--- !u!114 &1465023626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465023622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b650081a5e61b5648b0addd5c8122587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AirParticles: 100
+  Lifespan: 5
+  AirParticle: {fileID: 2564334870046613192, guid: 4d81856d3f0609c4084baf8a22021f3a,
+    type: 3}
+  Player: {fileID: 437944138}
 --- !u!1001 &1513613968
 PrefabInstance:
   m_ObjectHideFlags: 0

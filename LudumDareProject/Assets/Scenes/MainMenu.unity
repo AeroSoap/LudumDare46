@@ -177,8 +177,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1ef7c9d00e0129c418d64cd07dd73baa, type: 3}
-  m_Color: {r: 0.27058828, g: 0.5738732, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 16b28c01f966d6f46a5d4bd3f05b1694, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -197,7 +197,7 @@ Transform:
   m_GameObject: {fileID: 444398826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.64, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -221,8 +221,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &852147474
-BoxCollider2D:
+--- !u!60 &852147474
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -238,15 +238,19 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.48, y: 0.48}
+      - {x: -1.48, y: -0.45999998}
+      - {x: -1.27, y: -0.48}
+      - {x: 1.48, y: -0.48}
+      - {x: 1.48, y: 0.48}
 --- !u!114 &852147475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetScene: Warehouse
-  HoverSprite: {fileID: 21300000, guid: 649f2da850bd79e499b8fe48fc10e70a, type: 3}
+  HoverSprite: {fileID: 21300000, guid: 4bf3b4c2f16a9bd469f0cbba3d767a1f, type: 3}
 --- !u!212 &852147476
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -300,8 +304,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1ef7c9d00e0129c418d64cd07dd73baa, type: 3}
-  m_Color: {r: 0.7075472, g: 0.21026166, b: 0.21026166, a: 1}
+  m_Sprite: {fileID: 21300000, guid: de0e66aa2efb38642850d14cb962709d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -320,7 +324,7 @@ Transform:
   m_GameObject: {fileID: 852147473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.27, z: 0}
-  m_LocalScale: {x: 5.11, y: 1.67, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -361,7 +365,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.34901962, g: 0.34901962, b: 0.34901962, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
