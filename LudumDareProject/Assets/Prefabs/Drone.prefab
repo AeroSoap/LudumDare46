@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9127909512921940751}
   - component: {fileID: 8298070799133031332}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LeftProp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: -4038336074347934541}
   - component: {fileID: -9037612715151985822}
   - component: {fileID: 1329933052458728628}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Drone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5648831834943045598}
   - component: {fileID: 2843372333700725357}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RightProp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
