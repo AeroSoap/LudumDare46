@@ -16,7 +16,6 @@ public class GolfBall : MonoBehaviour
     Vector2 direction = new Vector2(-1, 1).normalized;
     public int magnitude;
     Rigidbody2D myRb;
-    float time = 0;
     public bool isRandom;
 
     // Start is called before the first frame update
