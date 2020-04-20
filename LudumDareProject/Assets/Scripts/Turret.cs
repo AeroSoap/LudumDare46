@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Josh
-
 public class Turret : MonoBehaviour {
 
 	public GameObject Laser;
