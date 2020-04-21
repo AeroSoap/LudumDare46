@@ -1112,7 +1112,7 @@ MonoBehaviour:
   MinY: 18
   MaxY: 40
   SpawnX: 200
-  DespawnX: -270
+  DespawnX: -224
   SpawnRate: 2
 --- !u!212 &904454602
 SpriteRenderer:
@@ -2162,6 +2162,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3435290522366270202, guid: 16a551aff71a9804f800a97985af0432,
+        type: 3}
+      propertyPath: NextScene
+      value: Base
+      objectReference: {fileID: 0}
     - target: {fileID: 6887449881503284986, guid: 16a551aff71a9804f800a97985af0432,
         type: 3}
       propertyPath: m_Name
